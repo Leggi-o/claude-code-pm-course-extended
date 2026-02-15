@@ -1,8 +1,8 @@
 # Level 1 Reference Guide: Claude Code Fundamentals
 
-**Status:** In Progress (Modules 1.1-1.5 Complete)
+**Status:** In Progress (Modules 1.1-1.6 Complete)
 **Last Updated:** February 14, 2026
-**Next Update:** After completing Modules 1.6-1.7
+**Next Update:** After completing Module 1.7
 
 ---
 
@@ -14,9 +14,10 @@
 4. [Module 1.3: First Tasks](#module-13-first-tasks)
 5. [Module 1.4: Agents](#module-14-agents)
 6. [Module 1.5: Custom Sub-Agents](#module-15-custom-sub-agents)
-7. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
-8. [Common Workflows](#common-workflows)
-9. [Tips & Best Practices](#tips--best-practices)
+7. [Module 1.6: Project Memory](#module-16-project-memory)
+8. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
+9. [Common Workflows](#common-workflows)
+10. [Tips & Best Practices](#tips--best-practices)
 
 ---
 
@@ -38,8 +39,8 @@ Claude Code is a powerful AI tool for Product Managers that can save you **10-20
 - 1.2: Visualizing Files (visual workspace setup)
 - 1.3: First Tasks (file operations, analysis, communication)
 - 1.4: Agents (parallel processing)
-- 1.5: Custom Sub-Agents (specialized assistants) ⬅️ YOU ARE HERE
-- 1.6: Project Memory (CLAUDE.md files)
+- 1.5: Custom Sub-Agents (specialized assistants)
+- 1.6: Project Memory (CLAUDE.md files) ⬅️ YOU ARE HERE
 - 1.7: Navigation (keyboard shortcuts, efficiency)
 
 **Level 2: Advanced PM Work**
@@ -506,6 +507,107 @@ Just copy the `.md` files into your `.claude/agents/` folder and they're ready t
 
 ---
 
+## Module 1.6: Project Memory
+
+### What You Learned
+
+✅ CLAUDE.md is permanent project memory - set it once, Claude knows your context every conversation
+✅ The constitution vs legislation hierarchy (CLAUDE.md always wins over prompts)
+✅ The # symbol lets you add rules dynamically (Global vs Project)
+✅ CLAUDE.md file hierarchy (Global > Project > Directory > Local)
+✅ Complete CLAUDE.md structure for a product (context, personas, style, terminology, rules)
+
+### Key Concept: Constitution vs Legislation
+
+|  | CLAUDE.md | User Prompts |
+| --- | --- | --- |
+| **Analogy** | Constitution (supreme law) | Legislation (flexible requests) |
+| **Priority** | ALWAYS wins | Yields to CLAUDE.md |
+| **Scope** | Every conversation, every time | Single conversation |
+| **Purpose** | Immutable rules, product context | Specific requests |
+
+**Example:**
+- CLAUDE.md says: "Always use Oxford commas"
+- You say: "Write without Oxford commas"
+- Result: Claude still uses Oxford commas (constitution wins)
+
+### What Goes in CLAUDE.md
+
+| Section | Purpose | Example |
+| --- | --- | --- |
+| **Product Context** | What your product is, stage, metrics | "TaskFlow is a PM SaaS, Series B, $2.5M ARR" |
+| **User Personas** | Who you're building for | "Sarah (Enterprise Admin), Mike (IC Engineer)" |
+| **Writing Style** | Tone, formatting, voice | "Active voice, Oxford commas, concise paragraphs" |
+| **Product Terminology** | Required terms | "Workspace (NOT Project), Task (NOT Issue)" |
+| **Team Reference** | Who's who, tools used | "Sarah Chen (CEO), Linear for engineering" |
+| **Immutable Rules** | ALWAYS/NEVER rules | "ALWAYS include acceptance criteria" |
+
+### The # Symbol - Add Rules On the Fly
+
+Type `#` at the start of a line to save a new rule:
+```
+# Always use bullet points instead of numbered lists in documentation
+```
+
+Claude will prompt you to choose where to save:
+- **Global memory** (~/.claude/CLAUDE.md) - Applies to ALL projects
+- **Project memory** (./CLAUDE.md) - Applies to this project only
+
+### CLAUDE.md Hierarchy
+
+```
+~/.claude/CLAUDE.md              # Global (all your projects)
+project/CLAUDE.md                # Project-specific
+project/frontend/CLAUDE.md       # Directory-specific
+project/CLAUDE.local.md          # Personal (gitignored, not shared)
+```
+
+**Priority:** Directory > Project > Global
+
+All applicable CLAUDE.md files **stack together** - they're all loaded.
+
+**When to use each:**
+- **Global:** Personal preferences across ALL projects ("I prefer concise explanations")
+- **Project:** Product-specific context ("TaskFlow uses 'Workspace' not 'Project'")
+- **Directory:** Folder-specific rules (e.g., frontend coding standards)
+- **Local:** Personal preferences you don't want to commit to git
+
+### How CLAUDE.md Affects Output
+
+Without CLAUDE.md, you'd need to remind Claude every time:
+- "Remember, we use 'Workspace' not 'Project'"
+- "Include acceptance criteria"
+- "Use active voice"
+- "Consider accessibility"
+
+With CLAUDE.md, all of this happens **automatically**. Claude follows your product standards without being reminded.
+
+### Quick Start: Creating Your Own CLAUDE.md
+
+Start simple - you can always add more later:
+
+```markdown
+# [Your Product] - Project Memory
+
+## Product Context
+[What it is, company stage, key metrics]
+
+## User Personas
+[2-3 key personas with pain points]
+
+## Writing Style
+[Tone, formatting preferences]
+
+## Terminology
+[Required terms, common corrections]
+
+## Immutable Rules
+ALWAYS: [things to always do]
+NEVER: [things to never do]
+```
+
+---
+
 ## Quick Reference: Commands & Patterns
 
 ### File Operations
@@ -775,14 +877,7 @@ Bug Documentation:
 
 ## What's Next in Level 1
 
-### Module 1.6: Project Memory (Coming Next)
-Use CLAUDE.md files to give Claude persistent context:
-- Project background
-- Style guidelines
-- Common workflows
-- Team preferences
-
-### Module 1.7: Navigation
+### Module 1.7: Navigation (Coming Next)
 Master keyboard shortcuts and efficiency tools:
 - Quick navigation
 - Search patterns
@@ -812,6 +907,8 @@ Watch the magic happen! ✨
 ## Glossary
 
 **@ (at symbol):** File reference syntax. Use `@filename` to tell Claude which file to read/analyze/transform.
+
+**CLAUDE.md:** A permanent memory file that gives Claude context about your project. Acts as the "constitution" — rules in CLAUDE.md always override prompt requests. Lives in your project root or `~/.claude/` for global rules.
 
 **Communication Style:** A reusable template that defines format, tone, and structure for a specific type of output (e.g., Slack update, executive email).
 
@@ -849,7 +946,7 @@ Watch the magic happen! ✨
 ---
 
 **Last Updated:** February 14, 2026
-**Modules Covered:** 1.1, 1.2, 1.3, 1.4, 1.5
-**Next Update:** After Module 1.6 (Project Memory)
+**Modules Covered:** 1.1, 1.2, 1.3, 1.4, 1.5, 1.6
+**Next Update:** After Module 1.7 (Navigation)
 
 **Questions?** Ask Claude anytime during the course!
