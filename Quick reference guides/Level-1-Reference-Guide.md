@@ -1,8 +1,8 @@
 # Level 1 Reference Guide: Claude Code Fundamentals
 
-**Status:** In Progress (Modules 1.1-1.4 Complete)
+**Status:** In Progress (Modules 1.1-1.5 Complete)
 **Last Updated:** February 14, 2026
-**Next Update:** After completing Modules 1.5-1.7
+**Next Update:** After completing Modules 1.6-1.7
 
 ---
 
@@ -13,9 +13,10 @@
 3. [Module 1.2: Visualizing Files](#module-12-visualizing-files)
 4. [Module 1.3: First Tasks](#module-13-first-tasks)
 5. [Module 1.4: Agents](#module-14-agents)
-6. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
-7. [Common Workflows](#common-workflows)
-8. [Tips & Best Practices](#tips--best-practices)
+6. [Module 1.5: Custom Sub-Agents](#module-15-custom-sub-agents)
+7. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
+8. [Common Workflows](#common-workflows)
+9. [Tips & Best Practices](#tips--best-practices)
 
 ---
 
@@ -36,8 +37,8 @@ Claude Code is a powerful AI tool for Product Managers that can save you **10-20
 - 1.1: Welcome (TaskFlow intro, course structure)
 - 1.2: Visualizing Files (visual workspace setup)
 - 1.3: First Tasks (file operations, analysis, communication)
-- 1.4: Agents (parallel processing) ⬅️ YOU ARE HERE
-- 1.5: Custom Sub-Agents (specialized assistants)
+- 1.4: Agents (parallel processing)
+- 1.5: Custom Sub-Agents (specialized assistants) ⬅️ YOU ARE HERE
 - 1.6: Project Memory (CLAUDE.md files)
 - 1.7: Navigation (keyboard shortcuts, efficiency)
 
@@ -345,7 +346,7 @@ Then combine into a competitive landscape synthesis."
 Then create a unified synthesis."
 ```
 
-   ## How to assign specialized agents to tasks:                                                                
+###    How to assign specialized agents to tasks                                                                
   **1. Just ask in plain English:**                                                     
   You describe what you want and I figure out the specializations. For example:       
   "Analyze my mobile app data:                                                      
@@ -390,6 +391,118 @@ Then create a unified synthesis."
 | 10 meeting notes | 50 min | ~5 min | 10x faster |
 | 5 competitor analyses | 2.5 hours | ~30 min | 5x faster |
 | Multi-source research (4 sources) | 2 hours | ~30 min | 4x faster |
+
+---
+
+## Module 1.5: Custom Sub-Agents
+
+### What You Learned
+
+✅ Custom sub-agents are pre-configured specialists with distinct personalities and expertise
+✅ Different from Module 1.4 - permanent team members vs temporary workers
+✅ Three pre-built sub-agents: Engineer, Executive, User Researcher
+✅ Call them explicitly ('Use the engineer subagent') or let Claude invoke them automatically
+✅ Multiple sub-agents can review the same work from different perspectives
+✅ Main Claude orchestrates: delegates to specialists, synthesizes results
+✅ Sub-agents live in `.claude/agents/` folder (hidden folder)
+✅ Each sub-agent has YAML frontmatter + system prompt
+✅ 100+ pre-built agents available in community libraries
+
+### Key Concept: Agents vs Sub-Agents
+
+|  | Agents (Module 1.4) | Sub-Agents (Module 1.5) |
+| --- | --- | --- |
+| **Nature** | Ad-hoc, temporary | Pre-configured, permanent |
+| **Created** | On the fly for parallel work | Once, reused many times |
+| **Analogy** | Temp contractors | Permanent specialized team |
+| **Capabilities** | Generic (any task) | Specialized (distinct personality & expertise) |
+| **Best for** | Batch parallel tasks | Repeated specialized perspectives |
+| **Use when** | You need parallel processing NOW | You need specialist input REPEATEDLY |
+
+### Your Pre-Built Team
+
+| Sub-Agent | Emoji | Color | Expertise |
+| --- | --- | --- | --- |
+| **Engineer** | (@_@) | Purple | Technical feasibility, architecture, implementation complexity |
+| **Executive** | (ಠ_ಠ) | Blue | Strategic framing, stakeholder communication, business cases |
+| **User Researcher** | (^◡^) | Green | Pain point synthesis, research analysis, user advocacy |
+
+### How to Invoke Sub-Agents
+
+**Two methods:**
+
+1. **Explicit** - You request a specific sub-agent:
+```
+"Use the engineer subagent to review this spec"
+"Have the executive subagent frame this for leadership"
+"Ask the user researcher subagent to analyze these interviews"
+```
+
+2. **Automatic** - Claude uses them when appropriate based on their description. Just ask naturally and Claude will route to the right specialist.
+
+**Multi-agent orchestration:**
+```
+"Have the Engineer, Executive, and User Researcher review
+feature-spec.md and create a consolidated review"
+```
+
+### Sub-Agent File Structure
+
+Each sub-agent is a `.md` file in `.claude/agents/` with two parts:
+
+**Section 1: YAML Frontmatter** (between `---` markers)
+- `name:` - Identifier (can include text face emoji for visual personality)
+- `description:` - When and how this sub-agent should be invoked
+- `tools:` (optional) - Which tools this agent can use
+- `model:` (optional) - Which AI model to use (sonnet, opus, haiku, or inherit)
+- `color:` (optional) - Visual identity color
+
+**Section 2: System Prompt** (after the frontmatter)
+- Who they are (background, experience, role)
+- What they provide (specific capabilities)
+- How they communicate (style, tone, approach)
+- What value they give you as a PM
+- Output structure they should follow
+
+The YAML frontmatter tells Claude Code **WHEN** to use the sub-agent.
+The system prompt tells the sub-agent **HOW** to behave.
+
+### Example: Executive Sub-Agent File
+
+```yaml
+---
+name: (ಠ_ಠ) executive
+description: Strategic framing, executive communication, and stakeholder alignment.
+tools: Read, Grep, Glob, Bash
+model: inherit
+color: blue
+---
+
+# (ಠ_ಠ) Executive - Strategic Communication Specialist
+
+You are a seasoned executive (VP or C-level) with 15+ years of leadership...
+
+## Your Role
+- Strategic framing and business context
+- Executive summary writing
+- Stakeholder communication advice
+...
+```
+
+### Community Libraries
+
+You don't have to create sub-agents from scratch! 100+ pre-built sub-agents are available:
+
+- **awesome-claude-agents:** Collection of 100+ pre-built agent personas
+- **pm-agent-library:** Product Manager specific sub-agent templates
+
+Just copy the `.md` files into your `.claude/agents/` folder and they're ready to use.
+
+**Common pre-built sub-agents:**
+- QA Tester, Data Analyst, Technical Writer
+- Competitive Intelligence, Growth Strategist
+- DevOps Engineer, Security Reviewer
+- Content Strategist, Design Reviewer
 
 ---
 
@@ -662,13 +775,7 @@ Bug Documentation:
 
 ## What's Next in Level 1
 
-### Module 1.5: Custom Sub-Agents (Coming Next)
-Create specialized assistants with custom personas:
-- "User Research Analyst" agent
-- "Technical Writer" agent
-- "Competitive Intelligence" agent
-
-### Module 1.6: Project Memory
+### Module 1.6: Project Memory (Coming Next)
 Use CLAUDE.md files to give Claude persistent context:
 - Project background
 - Style guidelines
@@ -742,7 +849,7 @@ Watch the magic happen! ✨
 ---
 
 **Last Updated:** February 14, 2026
-**Modules Covered:** 1.1, 1.2, 1.3, 1.4
-**Next Update:** After Module 1.5 (Custom Sub-Agents)
+**Modules Covered:** 1.1, 1.2, 1.3, 1.4, 1.5
+**Next Update:** After Module 1.6 (Project Memory)
 
 **Questions?** Ask Claude anytime during the course!
