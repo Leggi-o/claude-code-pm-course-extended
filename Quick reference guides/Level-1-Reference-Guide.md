@@ -1,8 +1,8 @@
 # Level 1 Reference Guide: Claude Code Fundamentals
 
-**Status:** In Progress (Modules 1.1-1.6 Complete)
-**Last Updated:** February 14, 2026
-**Next Update:** After completing Module 1.7
+**Status:** Complete (All Level 1 Modules)
+**Last Updated:** February 15, 2026
+**Next Update:** After completing Level 2
 
 ---
 
@@ -40,8 +40,8 @@ Claude Code is a powerful AI tool for Product Managers that can save you **10-20
 - 1.3: First Tasks (file operations, analysis, communication)
 - 1.4: Agents (parallel processing)
 - 1.5: Custom Sub-Agents (specialized assistants)
-- 1.6: Project Memory (CLAUDE.md files) ⬅️ YOU ARE HERE
-- 1.7: Navigation (keyboard shortcuts, efficiency)
+- 1.6: Project Memory (CLAUDE.md files)
+- 1.7: Claude Code Navigation (input modes, commands, shortcuts) ⬅️ YOU JUST COMPLETED THIS!
 
 **Level 2: Advanced PM Work**
 - 2.1: Write a PRD
@@ -608,6 +608,198 @@ NEVER: [things to never do]
 
 ---
 
+## Module 1.7: Claude Code Navigation
+
+### What You Learned
+
+✅ Three input modes: Edit, Auto-Accept, Plan Mode
+✅ When to use each mode (simple vs complex tasks)
+✅ Plan mode's auto-generated todo lists for visibility
+✅ Think keywords: `think about`, `think harder about`, `ultrathink about`
+✅ The `--dangerously-skip-permissions` flag for speed
+✅ Essential slash commands and keyboard shortcuts
+✅ Esc×2 rewind feature to undo changes
+
+### Input Modes
+
+| Mode | When to Use | How It Works |
+| --- | --- | --- |
+| **Edit Mode** (default) | When you want control and review | Shows every file change before applying - you approve each one |
+| **Auto-Accept Mode** | Straightforward tasks where you trust Claude | Automatically applies changes without asking |
+| **Plan Mode** | Complex multi-step work | Creates a plan with todos before execution - you see strategy upfront |
+
+**Switch modes:** Press **Shift+Tab** to cycle through modes (edit → auto-accept → plan)
+
+### When to Use Plan Mode
+
+✅ **USE Plan Mode for:**
+- Complex, multi-step tasks
+- Research → synthesis → strategy workflows
+- When you want to see the approach before execution
+- Tasks where visibility into progress matters
+- Any work where you might want to stop midway
+
+❌ **DON'T use Plan Mode for:**
+- Simple tasks ("fix this typo")
+- Single-step operations
+- Quick edits or transformations
+
+**Example Plan Mode Tasks:**
+- "Research competitors' AI features and create response strategy"
+- "Analyze all user data sources and build comprehensive synthesis"
+- "Create a full PRD from scratch including research, spec, and rollout plan"
+
+### Think Keywords
+
+Control the depth of Claude's analysis:
+
+| Keyword | Analysis Depth | When to Use |
+| --- | --- | --- |
+| `think about X` | Normal thinking | Standard analysis, general questions |
+| `think harder about X` | Deeper analysis | Complex problems requiring more consideration |
+| `ultrathink about X` | Maximum depth | Really hard problems, critical decisions (and it's rainbow!) |
+
+**Examples:**
+```
+"ultrathink about the competitive threats in this market"
+"think harder about the technical feasibility of this approach"
+"think about how to structure this PRD section"
+```
+
+### Advanced Flag: --dangerously-skip-permissions
+
+**Start Claude with:**
+```bash
+claude --dangerously-skip-permissions
+```
+
+**What it does:** Skips all permission prompts for faster execution
+
+**When to use:** When you trust Claude and want maximum speed (Carl's recommendation!)
+
+**When NOT to use:** Working on critical files, unfamiliar codebases, or when you want careful review
+
+### Complete Slash Commands Reference
+
+#### Navigation & Module Commands
+| Command | What It Does |
+| --- | --- |
+| `/start-X-Y` | Start a specific module (e.g., `/start-2-1` for Module 2.1) |
+| `/help` | Get help with Claude Code features and usage |
+| `/skills` | List all available skills (course modules and custom skills) |
+
+#### Model & Context Management
+| Command | What It Does |
+| --- | --- |
+| `/model` | Switch between Claude models (Sonnet 4.5, Opus 4.6, Haiku) |
+| `/model sonnet` | Switch to Sonnet 4.5 (default, great for most PM work) |
+| `/model opus` | Switch to Opus 4.6 (most capable, slower, higher cost) |
+| `/model haiku` | Switch to Haiku (fastest, cheapest, less capable) |
+| `/context` | See context usage (tokens, files loaded, custom agents, skills) |
+| `/clear` | Clear conversation history and start fresh |
+
+#### History & Undo
+| Command | What It Does |
+| --- | --- |
+| **Esc×2** (press Escape twice) | Rewind conversation and optionally revert file changes |
+| `/rewind` | Same as Esc×2 but with more control over how far back to go |
+| `/history` | View conversation history |
+
+#### Agent & Memory Management
+| Command | What It Does |
+| --- | --- |
+| `/agents` | List all custom sub-agents available in `.claude/agents/` |
+| `/memory` | View project memory (CLAUDE.md contents) |
+| `/memory add "rule"` | Add a new rule to CLAUDE.md |
+
+#### Task Management
+| Command | What It Does |
+| --- | --- |
+| `/tasks` | View current todo list (when in plan mode or using task tracking) |
+| `/status` | Check current task status and progress |
+
+#### Configuration & Settings
+| Command | What It Does |
+| --- | --- |
+| `/settings` | View and modify Claude Code settings |
+| `/config` | Access configuration options |
+
+#### Other Useful Commands
+| Command | What It Does |
+| --- | --- |
+| `/version` | Show Claude Code version information |
+| `/docs` | Open Claude Code documentation |
+| `/feedback` | Provide feedback or report issues |
+
+### Keyboard Shortcuts
+
+| Shortcut | What It Does |
+| --- | --- |
+| **Shift+Tab** | Cycle through input modes (edit → auto-accept → plan) |
+| **Esc×2** | Rewind conversation and revert changes |
+| **Ctrl+C** | Cancel current Claude operation |
+| **Ctrl+D** | Exit Claude Code session |
+| **Ctrl+V** | Paste images (works on Mac too - use Ctrl, not Command!) |
+| **Ctrl+T** | View current todo list status (in plan mode) |
+
+### The # Symbol - Add Rules On The Fly
+
+Type `#` at the start of a line to save a rule to memory:
+
+```
+# Always use bullet points instead of numbered lists
+```
+
+Claude will prompt you to choose:
+- **Global memory** (`~/.claude/CLAUDE.md`) - All projects
+- **Project memory** (`./CLAUDE.md`) - This project only
+
+### Quick Decision Guide: Which Mode?
+
+| Your Task | Recommended Mode | Why |
+| --- | --- | --- |
+| "Fix this typo in README" | Edit or Auto-Accept | Simple, no planning needed |
+| "Summarize this file" | Auto-Accept | Straightforward transformation |
+| "Create PRD from research" | Plan Mode | Multi-step, want to see approach |
+| "Research 5 competitors and synthesize" | Plan Mode | Complex, parallel work, need visibility |
+| "Transform content into 3 formats" | Auto-Accept | Straightforward, trust Claude |
+| "Build full product strategy" | Plan Mode | Complex, multi-phase, strategic |
+
+### Plan Mode Todo List
+
+When in plan mode, Claude creates an auto-generated todo list:
+
+**Features:**
+- ✅ Real-time updates as work progresses
+- ✅ See exactly what's happening and what's next
+- ✅ Press **Ctrl+T** to view current status
+- ✅ Press **Esc** to stop execution at any point
+
+**Example todo list:**
+```
+□ Research TaskFlow competitors
+□ Launch parallel agents (Asana, Linear, Monday.com, ClickUp, Jira)
+□ Synthesize competitive findings
+□ Create response strategy document
+```
+
+As work progresses, items check off automatically.
+
+### Level 1 Complete! 🎉
+
+You now have mastered:
+- File operations (read, write, edit, @references)
+- Command execution and analysis
+- Multi-format transformations
+- Agents for parallel processing
+- Custom sub-agents with specialized personas
+- Project memory (CLAUDE.md)
+- Input modes and navigation
+
+**Ready for Level 2:** Real Product Management workflows!
+
+---
+
 ## Quick Reference: Commands & Patterns
 
 ### File Operations
@@ -875,13 +1067,16 @@ Bug Documentation:
 
 ---
 
-## What's Next in Level 1
+## What's Next: Level 2
 
-### Module 1.7: Navigation (Coming Next)
-Master keyboard shortcuts and efficiency tools:
-- Quick navigation
-- Search patterns
-- Workflow optimization
+### ✅ Level 1 Complete!
+
+You've mastered all the fundamentals. Next up: **Level 2: Advanced PM Work**
+- Module 2.1: Write a PRD
+- Module 2.2: Analyze Data
+- Module 2.3: Product Strategy
+
+Type `/start-2-1` when ready!
 
 ---
 
@@ -945,8 +1140,8 @@ Watch the magic happen! ✨
 
 ---
 
-**Last Updated:** February 14, 2026
-**Modules Covered:** 1.1, 1.2, 1.3, 1.4, 1.5, 1.6
-**Next Update:** After Module 1.7 (Navigation)
+**Last Updated:** February 15, 2026
+**Modules Covered:** 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7 (Complete!)
+**Next Update:** After Level 2 modules
 
 **Questions?** Ask Claude anytime during the course!
