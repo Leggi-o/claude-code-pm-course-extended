@@ -29,3 +29,26 @@ ACTION ITEMS:
 - Marketing to create pricing page updates
 
 Target launch: November 1, 2024
+
+---
+
+## Summary
+
+### Action Items
+- You: Define Business tier feature set by Oct 15
+- CFO: Model revenue impact of new tier
+- Sales Lead (Tom): Prepare sales pitch for Business tier
+- Marketing: Create pricing page updates
+
+### Decisions Made
+- Launch Business tier at $18/user/month (between Pro and Enterprise)
+- Keep Pro pricing stable (no increase to $15)
+- Maintain annual discount at 20%
+- Do not implement usage-based pricing for integrations
+
+### Next Steps
+- Business tier feature set definition by Oct 15
+- Revenue impact modeling by CFO
+- Sales pitch and marketing page preparation
+- Target launch: November 1, 2024
+- Monitor conversion rates across all tiers for 3 months

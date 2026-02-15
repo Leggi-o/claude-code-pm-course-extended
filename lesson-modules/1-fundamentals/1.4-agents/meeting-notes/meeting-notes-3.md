@@ -22,3 +22,25 @@ ACTION ITEMS:
 - Jessica to schedule demo with their CTO next week
 
 OPPORTUNITY: High-value deal ($12k/year). Good reference customer for enterprise segment.
+
+---
+
+## Summary
+
+### Action Items
+- You: Send enterprise features roadmap to TechFlow by Oct 5
+- Jessica: Provide case study from similar-sized customer
+- You: Confirm uptime SLA guarantees with engineering
+- Jessica: Schedule demo with TechFlow's CTO next week
+
+### Decisions Made
+- TechFlow is actively evaluating tools to replace Asana
+- Security requirements (SOC 2, SAML SSO, audit logs) are non-negotiable
+- Target budget: $10-12k/year (below current Asana spend of $18k/year)
+
+### Next Steps
+- Deliver enterprise features roadmap by Oct 5
+- Obtain SLA guarantees from engineering
+- Provide competitive case study
+- Conduct technical demo with TechFlow's CTO
+- Decision timeline: November for selection, December for implementation

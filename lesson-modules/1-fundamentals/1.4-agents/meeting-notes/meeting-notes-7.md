@@ -28,3 +28,25 @@ ACTION ITEMS:
 - Team to prioritize activation improvements for Q4
 
 RECOMMENDATION: Focus on first 5 minutes of user experience. That's where we lose people.
+
+---
+
+## Summary
+
+### Action Items
+- You: Document findings in full research report by Oct 8
+- Amy: Design improved empty state with templates
+- You: Propose onboarding improvements in next product sync
+- Team: Prioritize activation improvements for Q4
+
+### Decisions Made
+- Focus on first 5 minutes of user experience as critical intervention point
+- Empty state needs starter templates for guidance
+- Move from video tutorials to interactive onboarding
+- Make team invites more prominent to improve viral coefficient
+
+### Next Steps
+- Complete research report (Oct 8)
+- Design improved empty state with templates
+- Propose onboarding improvements at next product sync
+- Q4 prioritization of activation improvements

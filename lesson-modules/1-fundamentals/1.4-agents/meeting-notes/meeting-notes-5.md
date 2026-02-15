@@ -31,3 +31,23 @@ ACTION ITEMS:
 - CFO to model revenue impact of activation improvements
 
 CEO closing: "Great progress, but we need to fix activation and churn before Series C fundraising in Q2."
+
+---
+
+## Summary
+
+### Action Items
+- Sarah Chen: Present activation improvement plan by Oct 20
+- CS Lead: Analyze churn reasons and present findings by Oct 25
+- Sales Lead: Propose enterprise sales process improvements
+- CFO: Model revenue impact of activation improvements
+
+### Decisions Made
+- Q4 priorities reaffirmed: Mobile app, enterprise features, activation funnel
+- Activation rate (45%) and churn (5%) are critical issues pre-Series C
+
+### Next Steps
+- Activation improvement plan due Oct 20
+- Churn analysis due Oct 25
+- Streamline enterprise sales process (currently 6-month cycle)
+- Prepare for Series C fundraising in Q2 with improved metrics

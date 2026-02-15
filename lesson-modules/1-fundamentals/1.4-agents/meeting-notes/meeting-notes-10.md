@@ -37,3 +37,26 @@ ACTION ITEMS:
 - Sarah to evaluate AI feature opportunities for 2025 roadmap
 
 Next competitive review: January 2025 (quarterly cadence)
+
+---
+
+## Summary
+
+### Action Items
+- You: Compile detailed competitive feature matrix by Oct 10
+- Marketing: Update website positioning based on discussion
+- Sales: Create competitive battle cards for sales team
+- Sarah Chen: Evaluate AI feature opportunities for 2025 roadmap
+
+### Decisions Made
+- Core differentiator: "Project management built for how remote teams actually work"
+- Linear is biggest threat for developer-focused teams
+- Asana's AI features are a competitive concern
+- Monday.com outspending on marketing but weak on product
+
+### Next Steps
+- Competitive feature matrix due Oct 10
+- Website positioning updates
+- Sales battle cards creation
+- AI feature evaluation for 2025 roadmap
+- Next competitive review: January 2025

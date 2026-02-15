@@ -1,8 +1,8 @@
 # Level 1 Reference Guide: Claude Code Fundamentals
 
-**Status:** In Progress (Modules 1.1-1.3 Complete)
+**Status:** In Progress (Modules 1.1-1.4 Complete)
 **Last Updated:** February 14, 2026
-**Next Update:** After completing Modules 1.4-1.7
+**Next Update:** After completing Modules 1.5-1.7
 
 ---
 
@@ -12,9 +12,10 @@
 2. [Module 1.1: Welcome](#module-11-welcome)
 3. [Module 1.2: Visualizing Files](#module-12-visualizing-files)
 4. [Module 1.3: First Tasks](#module-13-first-tasks)
-5. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
-6. [Common Workflows](#common-workflows)
-7. [Tips & Best Practices](#tips--best-practices)
+5. [Module 1.4: Agents](#module-14-agents)
+6. [Quick Reference: Commands & Patterns](#quick-reference-commands--patterns)
+7. [Common Workflows](#common-workflows)
+8. [Tips & Best Practices](#tips--best-practices)
 
 ---
 
@@ -34,8 +35,8 @@ Claude Code is a powerful AI tool for Product Managers that can save you **10-20
 **Level 1: Fundamentals**
 - 1.1: Welcome (TaskFlow intro, course structure)
 - 1.2: Visualizing Files (visual workspace setup)
-- 1.3: First Tasks (file operations, analysis, communication) ⬅️ YOU ARE HERE
-- 1.4: Agents (parallel processing)
+- 1.3: First Tasks (file operations, analysis, communication)
+- 1.4: Agents (parallel processing) ⬅️ YOU ARE HERE
 - 1.5: Custom Sub-Agents (specialized assistants)
 - 1.6: Project Memory (CLAUDE.md files)
 - 1.7: Navigation (keyboard shortcuts, efficiency)
@@ -276,6 +277,119 @@ Throughout this course, you work as a Senior PM at TaskFlow:
 | User research synthesis | 2-3 hours | 5 min | ~2.5 hours |
 | Multi-format communications | 30-45 min | 2 min | ~35 min |
 | **Weekly total (if done weekly)** | **3-4 hours** | **\~10 min** | **\~3.5 hours/week** |
+
+---
+
+## Module 1.4: Agents
+
+### What You Learned
+
+✅ Agents are independent Claude instances that work simultaneously
+✅ Parallel processing: 10 tasks at once instead of 1 at a time
+✅ When to use agents vs regular sequential work
+✅ Batch processing pattern (10 meeting notes processed simultaneously)
+✅ The math: 10 tasks × 5 min = 50 min sequential, or 5 min with 10 agents
+
+### Key Concept: Agents vs Regular Claude
+
+|  | Regular Claude | Agents |
+| --- | --- | --- |
+| **Tasks** | One at a time, sequential | Multiple at once, parallel |
+| **Speed** | 1x | Nx (where N = number of agents) |
+| **Best for** | Single tasks, iterative work | Batch processing, multi-source research |
+| **Each agent** | — | Full Claude instance with all capabilities |
+
+### When to Use Agents
+
+✅ **USE agents for:**
+- Batch processing (10 meeting notes, 20 interviews, 15 tickets)
+- Multi-source research (5 competitors researched simultaneously)
+- Different data types (interviews + surveys + tickets + sales notes)
+- Any task that can be broken into independent parallel pieces
+
+❌ **DON'T use agents for:**
+- Single tasks (just ask Claude directly)
+- Sequential work (Task 2 depends on Task 1's output)
+- Simple quick tasks (overkill)
+- Iterative conversations (strategy discussions, brainstorming)
+
+### How to Decide: Agent Checklist
+
+1. **Can this be broken into independent parallel tasks?** If yes → agents
+2. **How many independent tasks?** That's how many agents you need
+3. **Are tasks similar or different?** Similar = generic agents, Different = specialized agents
+4. **Will outputs need combining?** If yes → plan a synthesis step
+
+### Agent Patterns for PMs
+
+**Pattern 1: Batch Processing (Same Task, Many Files)**
+```
+"Process all 10 meeting notes in parallel using agents.
+Each agent should extract action items, decisions, and next steps."
+```
+
+**Pattern 2: Multi-Source Research (Different Sources, Same Topic)**
+```
+"Research our top 5 competitors in parallel.
+Each agent should research one competitor's features, pricing, and positioning.
+Then combine into a competitive landscape synthesis."
+```
+
+**Pattern 3: Specialized Agents (Different Tasks, Different Data)**
+```
+"Analyze these data sources with specialized agents:
+- Agent 1 (Interview Analyst): Analyze user interviews
+- Agent 2 (Survey Analyst): Analyze survey CSV data
+- Agent 3 (Support Analyst): Review support tickets
+- Agent 4 (Sales Analyst): Review sales notes
+Then create a unified synthesis."
+```
+
+   ## How to assign specialized agents to tasks:                                                                
+  **1. Just ask in plain English:**                                                     
+  You describe what you want and I figure out the specializations. For example:       
+  "Analyze my mobile app data:                                                      
+- Analyze user interviews for pain points and quotes                            
+- Analyze the survey CSV for percentages and segments                               
+- Review support tickets for common scenarios                                       
+- Review sales notes for lost revenue impact
+  Then synthesize everything into one report."
+
+  I'll spin up agents with the right "lens" for each data type based on your
+  description.
+
+  **2.** **Explicitly** **name** **the** **specializations:**
+  You can be more specific about what each agent should focus on:
+  "Use specialized agents:
+- Interview Analyst: read user-interviews/, extract emotional pain points and direct
+   quotes
+- Survey Analyst: read survey.csv, calculate percentages by role
+- Support Analyst: read support-tickets/, categorize by use case and severity
+- Sales Analyst: read sales-notes.md, quantify revenue impact
+  Then combine into a synthesis."
+
+  **The** **key** **insight:** The specialization comes from the *instructions* you give, not from
+  some technical configuration. You're telling each agent what to focus on, what lens
+  to use, and what output to produce. The more specific your instructions, the more
+  specialized the analysis.
+
+
+### Agents vs Custom Sub-Agents (Preview)
+
+|  | Agents (Module 1.4) | Custom Sub-Agents (Module 1.5) |
+| --- | --- | --- |
+| **Nature** | Ad-hoc, temporary | Pre-configured, permanent |
+| **Created** | On the fly for parallel work | Once, reused many times |
+| **Analogy** | Temp contractors | Permanent specialized team |
+| **Best for** | Batch parallel tasks | Consistent specialized analysis |
+
+### Time Savings (Module 1.4)
+
+| Task | Sequential Time | With Agents | Savings |
+| --- | --- | --- | --- |
+| 10 meeting notes | 50 min | ~5 min | 10x faster |
+| 5 competitor analyses | 2.5 hours | ~30 min | 5x faster |
+| Multi-source research (4 sources) | 2 hours | ~30 min | 4x faster |
 
 ---
 
@@ -548,15 +662,7 @@ Bug Documentation:
 
 ## What's Next in Level 1
 
-### Module 1.4: Agents (Coming Next)
-Learn to clone Claude to work in parallel:
-- Process 10 meeting notes simultaneously
-- Research 5 competitors at once
-- Analyze multiple data sources in parallel
-
-**Time savings:** 10x on parallelizable tasks
-
-### Module 1.5: Custom Sub-Agents
+### Module 1.5: Custom Sub-Agents (Coming Next)
 Create specialized assistants with custom personas:
 - "User Research Analyst" agent
 - "Technical Writer" agent
@@ -636,7 +742,7 @@ Watch the magic happen! ✨
 ---
 
 **Last Updated:** February 14, 2026
-**Modules Covered:** 1.1, 1.2, 1.3
-**Next Update:** After Module 1.4 (Agents)
+**Modules Covered:** 1.1, 1.2, 1.3, 1.4
+**Next Update:** After Module 1.5 (Custom Sub-Agents)
 
 **Questions?** Ask Claude anytime during the course!
