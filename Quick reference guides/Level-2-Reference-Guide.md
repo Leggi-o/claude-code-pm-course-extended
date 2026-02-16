@@ -54,7 +54,7 @@ Before starting Level 2, you should have completed:
 ### What Makes Level 2 Different
 
 | Level 1 | Level 2 |
-|---|---|
+| --- | --- |
 | Learning **mechanics** | Applying to **real PM work** |
 | Individual skills | **End-to-end workflows** |
 | Simple transformations | **Complex multi-step processes** |
@@ -175,7 +175,7 @@ Make segment-specific recommendation
 
 ### What You'll Learn
 
-_Module content coming after Module 2.2 completion_
+*Module content coming after Module 2.2 completion*
 
 ### Key Workflows (Module 2.3)
 
@@ -302,7 +302,206 @@ _Module content coming after Module 2.2 completion_
 
 ### PRD Templates
 
-**Coming soon after Module 2.1**
+**Location:** `lesson-modules/2-advanced-pm-work/2.1-write-prd/prd-templates/`
+
+You have 4 different PRD templates to choose from, each with different strengths:
+
+#### Quick Comparison Table
+
+| Template | Complexity | Best For | Key Strength |
+| --- | --- | --- | --- |
+| **Lenny's (Original)** | ⭐ Minimal | Small features, experiments, startups | Speed - get ideas on paper fast |
+| **Lenny's Enhanced** | ⭐⭐⭐ Moderate | AI features, complex products | AI-specific sections + monetization |
+| **Carl's Template** | ⭐⭐⭐⭐ Comprehensive | Large features, stakeholder alignment | Problem/solution separation |
+| **Tania's Spec Template** | ⭐⭐⭐⭐⭐ Very Detailed | FinTech, regulated industries, QA-heavy | Customer feedback + testing focus |
+
+#### Template 1: Lenny's PRD Template (Original)
+
+**Author:** Lenny Rachitsky
+**File:** `Lennys-PRD-Template.md`
+
+**Philosophy:** Answer 7 essential questions, nothing more. Optimized for speed and clarity.
+
+**Sections:**
+1. Description - What is it?
+2. Problem - What problem is this solving?
+3. Why - How do we know this is a real problem?
+4. Success - How do we know if we've solved it?
+5. Audience - Who are we building for?
+6. What - What does this look like?
+7. How - What is the experiment plan?
+8. When - When does it ship?
+
+**Use when:**
+- ✅ Small feature or quick experiment
+- ✅ Early-stage product or startup
+- ✅ Need to move extremely fast
+- ✅ Simple problem with clear solution
+- ✅ Small team that doesn't need heavy process
+
+**Skip when:**
+- ❌ Need to align execs across departments
+- ❌ Complex technical implementation
+- ❌ AI/ML features with edge cases
+- ❌ Regulated industry requiring detailed specs
+
+---
+
+#### Template 2: Lenny's PRD Template - Enhanced
+
+**Author:** Lenny Rachitsky (enhanced version)
+**File:** `Lennys-PRD-Template-Enhanced.md`
+
+**Philosophy:** Lenny's minimalist spirit + sections for AI features, monetization, and cross-functional alignment.
+
+**Additional sections beyond original:**
+- 🤖 **AI Autonomy & Control** - What AI can/cannot do autonomously, edge cases, user control
+- 💰 **Monetization & Business Case** - Pricing tier, revenue model, projected impact
+- 📋 **Documentation & Workflow** - Links to Jira, Figma, related docs
+- **Changelog** - Track how PRD evolves over time
+- **V2 Roadmap Preview** - Future enhancements post-V1
+
+**Use when:**
+- ✅ AI-powered features (critical: need autonomy boundaries)
+- ✅ Need explicit monetization strategy
+- ✅ Integration with Jira/agile workflow
+- ✅ Want structured changelog tracking
+- ✅ Building for multiple personas with different needs
+
+**Skip when:**
+- ❌ Want absolute minimalism (use original Lenny's)
+- ❌ No AI components and simple monetization
+- ❌ Pre-product-market-fit exploration
+
+---
+
+#### Template 3: Carl's PRD Template
+
+**Author:** Carl (source unknown, popular in tech)
+**File:** `Carls-PRD-Template.md`
+
+**Philosophy:** Separate problem alignment from solution alignment. Ensure everyone agrees on the WHY before discussing the HOW.
+
+**Structure:**
+
+**Part 1: Problem Alignment**
+- Problem & Opportunity
+- High Level Approach
+- Narrative (optional customer stories)
+- Goals (measurable + immeasurable)
+- Non-goals (explicit exclusions)
+
+**Part 2: Solution Alignment**
+- Key Features (plan of record + future considerations)
+- Key Flows (end-to-end experience)
+- Key Logic (rules, edge cases, non-functional requirements)
+
+**Part 3: Development and Launch Planning**
+- Key Milestones
+- Operational Checklist
+
+**Use when:**
+- ✅ Large, complex features
+- ✅ Need to align multiple stakeholders (exec, eng, design, sales)
+- ✅ Problem space is ambiguous or contested
+- ✅ Solution requires significant eng investment
+- ✅ Want to separate "what to build" from "how to build it"
+
+**Skip when:**
+- ❌ Small, obvious feature
+- ❌ Need to move extremely fast
+- ❌ Single-person project with no stakeholder alignment needed
+
+---
+
+#### Template 4: Tania's Spec Template
+
+**Author:** Tania (FinTech/Banking context)
+**File:** `Tanias-Spec-Template.md`
+
+**Philosophy:** Comprehensive spec optimized for regulated industries, customer-driven development, and QA-heavy workflows.
+
+**Unique sections:**
+- **Supporting Data** - Power BI metrics, customer metrics, usage data
+- **Customer Feedback** - Structured 2-3 customer conversations with business impact
+- **Market Research** - Competitor screenshots and industry insights
+- **UX Brief** - Separate from development (Flow, Context, Sketch, Success metrics)
+- **UX Tasks Table** - Use Case | User Story | Link to Monday ticket
+- **Development Requirements Table** - User Story | Acceptance Criteria | Testing | Link
+  - **Testing column** - QA testing notes separate from acceptance criteria
+- **Open Questions** - Product needs R&D/Data to answer
+- **Risks** - Product, technical, delivery risks
+- **Limitations / Requirements** - Version requirements, platform constraints
+
+**Use when:**
+- ✅ FinTech, banking, healthcare, or regulated industries
+- ✅ Heavy customer co-development (working directly with 2-3 banks/clients)
+- ✅ Need explicit testing guidance for QA team
+- ✅ Multiple constraints (version requirements, platform limitations)
+- ✅ Need to link every requirement to tickets (Monday, Jira, etc.)
+- ✅ Require separate UX and development sections
+
+**Skip when:**
+- ❌ Consumer product without regulatory requirements
+- ❌ Fast-moving startup environment
+- ❌ Don't have customer conversations to structure
+- ❌ Testing is handled by engineering, not separate QA
+
+---
+
+#### Choosing the Right Template
+
+**Start here:**
+
+1. **Is this an AI feature?** → Use **Lenny's Enhanced** for AI autonomy sections
+2. **Do you work in FinTech/regulated industry?** → Use **Tania's Spec Template**
+3. **Is problem alignment critical?** → Use **Carl's Template** to separate problem/solution
+4. **Do you need speed above all?** → Use **Lenny's Original**
+
+**Mix and match:**
+- You can combine sections from different templates
+- Start with a base template and add sections you need
+- Example: Carl's structure + Tania's testing column + Lenny's AI sections
+
+**Pro tip:**
+- For your first PRD, use Lenny's Original to get comfortable
+- As projects get more complex, migrate to Carl's or Enhanced versions
+- Keep a "house template" for your team and customize it over time
+
+---
+
+#### Template Comparison: What's Different?
+
+**Customer Evidence:**
+- **Tania's:** Most structured (2-3 customer conversations with business impact)
+- **Carl's:** Incorporated into Problem & Opportunity section
+- **Lenny's (both):** "Why" section with evidence bullets
+
+**Testing & QA:**
+- **Tania's:** Separate Testing column in requirements table (unique!)
+- **Carl's:** Key Logic section includes edge cases
+- **Lenny's (both):** Minimal - assumes eng/design handle edge cases
+
+**AI Features:**
+- **Lenny's Enhanced:** Dedicated AI Autonomy & Control section (unique!)
+- **Other templates:** Would need to add AI sections manually
+
+**Stakeholder Alignment:**
+- **Carl's:** Best - separates problem vs solution alignment explicitly
+- **Tania's:** Strong - structured customer feedback section
+- **Lenny's:** Minimal - assumes small team with tight alignment
+
+**Monetization:**
+- **Lenny's Enhanced:** Explicit business case section (unique!)
+- **Carl's:** Goals section can include revenue goals
+- **Tania's:** Business Impact mentioned but not explicit ROI section
+
+---
+
+**All templates available at:**
+```
+/Users/lironavineri/Documents/claude-code-course/lesson-modules/2-advanced-pm-work/2.1-write-prd/prd-templates/
+```
 
 ### Data Reports
 
@@ -447,7 +646,7 @@ _Module content coming after Module 2.2 completion_
 ## Level 2 Progress Tracker
 
 | Module | Status | Key Deliverable |
-|---|---|---|
+| --- | --- | --- |
 | 2.1: Write a PRD | 🔄 In Progress | Product Requirements Document |
 | 2.2: Analyze Data | ✅ Complete | Problem Analysis, ROI Scenarios, Experiment Readout |
 | 2.3: Product Strategy | ⏳ Not Started | Strategic Roadmap |
