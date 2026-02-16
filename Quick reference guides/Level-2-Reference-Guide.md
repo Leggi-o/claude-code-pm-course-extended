@@ -175,11 +175,154 @@ Make segment-specific recommendation
 
 ### What You'll Learn
 
-*Module content coming after Module 2.2 completion*
+✅ **Rumelt's Strategy Kernel Framework**
+- Diagnosis: What's the strategic challenge or opportunity?
+- Guiding Policy: Our overall approach (where the hard choices happen)
+- Coherent Actions: Specific, coordinated steps that reinforce each other
+
+✅ **Making Strategic Tradeoffs**
+- Understanding that strategy is about choices (saying YES to some things, NO to others)
+- Using devil's advocate to pressure-test strategic decisions
+- Recognizing that all strategic choices have tradeoffs
+
+✅ **Competitive Research for Strategy**
+- Using parallel agents to research competitive landscape quickly
+- Identifying whitespace and differentiation opportunities
+- Understanding what's commoditizing vs what's differentiated
+
+✅ **Strategy → Execution**
+- Translating strategic choices into coherent roadmap
+- Using skills (pptx) to transform strategy docs into executive presentations
+- Creating defensible, well-reasoned strategic direction
+
+### Rumelt's Strategy Kernel
+
+**Framework:** From "Good Strategy, Bad Strategy" by Richard Rumelt
+
+This framework has three essential parts that form the core of any solid strategy:
+
+**1. DIAGNOSIS - "What's really going on here?"**
+- Identifies the core challenge or opportunity
+- Based on real data and competitive landscape
+- Cuts through complexity to the essential issue
+- Example: "AI is becoming table stakes, but no one has won yet. With limited resources, where can we uniquely win?"
+
+**2. GUIDING POLICY - "What's our approach?"**
+- Makes hard choices about WHERE to compete and HOW to win
+- Says NO to some opportunities to focus on others
+- Creates advantage through tradeoffs
+- Example: "Focus on voice AI for SMBs, NOT enterprise; NOT spreading AI everywhere"
+
+**3. COHERENT ACTIONS - "How do we execute?"**
+- Specific initiatives that reinforce each other
+- Sequenced roadmap with clear dependencies
+- Resources focused on the strategy
+- Example: "Q1: Expand voice to meetings, Q2: Add voice collaboration features"
+
+**Why This Matters:**
+Most "strategies" are just lists of goals ("grow 50%!") or features ("build everything!"). Real strategy involves:
+- **Choices** about where to compete
+- **Tradeoffs** about what NOT to do
+- **Focus** on actions that reinforce each other
+
+**Red Flags (Bad Strategy):**
+- ❌ Goals masquerading as strategy ("be the best", "delight customers")
+- ❌ No real tradeoffs made ("we'll do everything for everyone")
+- ❌ Laundry list of initiatives that don't reinforce each other
+- ❌ Wishful thinking without advantage ("we'll out-innovate competitors")
 
 ### Key Workflows (Module 2.3)
 
-**Coming soon**
+**Strategic Development Workflow**
+
+**Step 1: Competitive Research**
+```bash
+# Use parallel agents to research competitors
+"Spin up 3 agents to research Notion, Linear, and Asana's AI strategies"
+
+# Each agent researches:
+# - What AI features they've launched
+# - How they position/price AI
+# - What's working vs not working
+# - Where there might be whitespace
+```
+
+**Step 2: Diagnosis (Understand the Challenge)**
+```bash
+# Synthesize competitive research
+"Based on competitor research, what's the strategic challenge for TaskFlow's AI?"
+
+# Consider constraints
+"What are our team/budget/capability constraints?"
+
+# Identify the core opportunity
+"Where can we uniquely win with limited resources?"
+```
+
+**Step 3: Make Strategic Choices (Guiding Policy)**
+
+Make 5 key strategic choices, each with tradeoffs:
+1. **Focus vs Breadth** - Go deep on one capability or spread AI everywhere?
+2. **Competitive Response** - Race to catch up or differentiate differently?
+3. **Business Model** - Premium tier, subsidize, or usage-based pricing?
+4. **Product Scope** - AI as the product, enhancement, or specific tools?
+5. **Risk Tolerance** - Move fast, be deliberate, or wait and learn?
+
+For each choice:
+- **Choose A, B, or C** (each option has different tradeoffs)
+- **Face devil's advocate challenge** (pressure-test your thinking)
+- **Stick or reconsider** (refine based on challenge)
+
+**Step 4: Synthesize Strategy Document**
+```bash
+# Create complete strategy using Rumelt's Kernel
+"Synthesize my 5 strategic choices into a complete strategy document"
+
+# Output structure:
+# - DIAGNOSIS: The strategic challenge
+# - GUIDING POLICY: Our strategic approach (from 5 choices)
+# - COHERENT ACTIONS: H1 2026 roadmap aligned with choices
+# - CRITICAL ASSUMPTIONS: What needs to be true?
+# - COMPETITIVE POSITIONING: Why we'll win
+```
+
+**Step 5: Create Executive Presentation**
+```bash
+# Use pptx skill to transform strategy into slides
+/pptx "Create executive presentation from h1-2026-ai-product-strategy.md"
+
+# Generates:
+# - 12-15 professional slides
+# - Charts, graphs, visual elements
+# - Ready for leadership review
+```
+
+### Critical Lessons Learned
+
+**🎯 Strategy Is About Choices, Not Goals**
+- "Grow 50%" is a goal, not a strategy
+- "Focus on voice AI for SMBs, exclude enterprise" is strategy
+- Real strategy says NO to things to create focus
+
+**🤔 Use Devil's Advocate to Pressure-Test**
+- Challenge every strategic choice with tough questions
+- Better to hear hard questions from AI than from your CEO
+- Refine thinking before sharing with stakeholders
+
+**🔗 Actions Must Be Coherent**
+- Each initiative should reinforce the others
+- Laundry lists of features ≠ strategy
+- Sequencing matters (what comes first, what depends on what)
+
+**📊 Competitive Research Informs Diagnosis**
+- Use parallel agents to research 3-5 competitors quickly
+- Identify what's commoditizing vs differentiated
+- Find whitespace where you can uniquely win
+
+**🎤 Transform Strategy → Presentation with Skills**
+- Use /pptx to convert strategy docs to executive slides
+- Skills extend Claude Code beyond conversation
+- Professional deliverables ready for stakeholder review
 
 ---
 
@@ -236,7 +379,64 @@ Make segment-specific recommendation
 
 ### Strategy Development Workflow
 
-**Coming soon after Module 2.3**
+**End-to-End Strategic Planning**
+
+**Step 1: Research the Competitive Landscape**
+```bash
+# Launch parallel agents for competitor research
+"Spin up 3 agents to research [Competitor A], [Competitor B], [Competitor C]'s strategies"
+
+# Consolidate findings
+"What are the key insights? Where's the whitespace?"
+```
+
+**Step 2: Define Your Diagnosis**
+```bash
+# Identify the strategic challenge
+"Based on competitive research and our constraints, what's the core challenge?"
+
+# Use Rumelt's framework
+"Apply @rumelt-strategy-kernel.md to structure our diagnosis"
+```
+
+**Step 3: Make Strategic Choices (Guiding Policy)**
+```bash
+# Make hard tradeoffs across 5 dimensions:
+"Help me think through strategic choices on:
+1. Focus vs Breadth
+2. Competitive Response
+3. Business Model
+4. Product Scope
+5. Risk Tolerance"
+
+# Use devil's advocate
+"Challenge each choice with tough questions"
+```
+
+**Step 4: Build Strategy Document**
+```bash
+# Synthesize choices into complete strategy
+"Create a strategy document with:
+- DIAGNOSIS: Strategic challenge
+- GUIDING POLICY: Our approach (from my 5 choices)
+- COHERENT ACTIONS: Roadmap aligned with choices
+- CRITICAL ASSUMPTIONS: What needs to be true
+- COMPETITIVE POSITIONING: Why we'll win"
+```
+
+**Step 5: Create Executive Presentation**
+```bash
+# Transform strategy into slides
+/pptx "Create executive presentation from [strategy-doc.md]"
+```
+
+**Key Prompts for Strategy Work:**
+- "Research [competitor names] and identify their strategic direction"
+- "What's the strategic challenge we're facing?"
+- "Apply Rumelt's Strategy Kernel to structure this"
+- "Challenge this strategic choice as devil's advocate"
+- "How do these 5 choices fit together into a coherent strategy?"
+- "Transform this strategy doc into executive slides"
 
 ---
 
@@ -649,7 +849,7 @@ You have 4 different PRD templates to choose from, each with different strengths
 | --- | --- | --- |
 | 2.1: Write a PRD | 🔄 In Progress | Product Requirements Document |
 | 2.2: Analyze Data | ✅ Complete | Problem Analysis, ROI Scenarios, Experiment Readout |
-| 2.3: Product Strategy | ⏳ Not Started | Strategic Roadmap |
+| 2.3: Product Strategy | 🔄 In Progress | AI Product Strategy, Executive Presentation |
 
 ---
 
