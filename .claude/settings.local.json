@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nComplete Module 2.1 PRD exercise with AI voice feature\n\n- Add three strategic PRD versions \\(voice-first, mobile-first, AI-first\\)\n- Add final refined PRD with feedback incorporated\n- Add agent review feedback consolidation\n- Add PRD learnings summary from student questions\n- Add enhanced Lenny''s PRD template for AI features\n\nIncludes comprehensive AI autonomy & control section with:\n- Categorization logic and confidence thresholds\n- Edge case handling \\(6 key scenarios\\)\n- User control mechanisms and success metrics\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebFetch(domain:linear.app)",
+      "WebFetch(domain:www.notion.com)",
+      "WebFetch(domain:www.eesel.ai)"
+    ]
+  }
+}
