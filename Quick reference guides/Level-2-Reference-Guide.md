@@ -379,9 +379,9 @@ When developing product strategy, make decisions across these 5 dimensions:
 **How It Works:**
 1. Make a strategic choice
 2. AI plays devil's advocate with tough challenge questions:
-   - "What if your assumption is wrong?"
-   - "What about this alternative perspective?"
-   - "How do you address this risk?"
+  - "What if your assumption is wrong?"
+  - "What about this alternative perspective?"
+  - "How do you address this risk?"
 3. Defend your choice or reconsider
 4. Results in more robust, defensible strategy
 
@@ -393,6 +393,311 @@ When developing product strategy, make decisions across these 5 dimensions:
 - **Choice: Move fast** → "Shipping experimental features creates confusing user experience"
 
 **Key Insight:** Better to hear hard questions from AI than blindsided by your CEO or board
+
+### Gibson Biddle's DHM Model
+
+**Framework:** From Gibson Biddle, former VP Product at Netflix
+
+DHM stands for **Delight**, **Hard to Copy**, and **Margin-enhancing**. It's a framework for evaluating product strategy to ensure strategies are not only loved by customers, but also defensible and economically viable.
+
+**A strong product strategy scores well on ALL THREE dimensions.** Weak strategies might delight customers but aren't defensible or don't improve the business model.
+
+#### The Three Dimensions
+
+**D = DELIGHT**
+- Does this solve a meaningful customer problem?
+- Is the solution significantly better than alternatives?
+- Will customers love it (not just tolerate it)?
+- Would customers be upset if you removed it?
+
+**Testing for Delight:**
+- Customer satisfaction scores and NPS
+- Usage metrics and retention
+- Qualitative feedback ("I love this!")
+
+**Example:** Netflix Recommendations delight users by helping them discover content they'll love from a massive catalog, reducing decision paralysis with personalized suggestions.
+
+**H = HARD TO COPY**
+- What makes this defensible?
+- Why can't competitors easily replicate it?
+
+**Types of Defensibility:**
+- Network effects (value increases with more users)
+- Data moats (proprietary data improves the product)
+- Technical complexity (hard engineering problems)
+- Ecosystem lock-in (integration makes switching costly)
+- Brand & trust (reputation takes years to build)
+- Cost structure (economies of scale)
+
+**Example:** Netflix Recommendations are hard to copy because they require massive viewing data + years of algorithm development + human content tagging. Competitors starting today would be years behind.
+
+**M = MARGIN-ENHANCING**
+- Does this improve our business model and unit economics?
+
+**Ways to Enhance Margin:**
+- Increase revenue (higher prices, upsell/cross-sell, new revenue streams)
+- Reduce costs (automation, efficiency, lower CAC, reduced support)
+- Improve retention (higher LTV, reduced churn, habit formation)
+- Enable premium positioning (justify higher prices)
+
+**Example:** Netflix Recommendations are margin-enhancing by increasing content utilization, improving retention, and reducing marketing costs (discovery is built-in vs. promoting specific titles).
+
+#### How to Use DHM
+
+**Step 1: Score Your Strategy**
+Rate each dimension (High/Medium/Low):
+
+| Strategy | Delight | Hard to Copy | Margin-Enhancing | Assessment |
+|----------|---------|--------------|------------------|------------|
+| A | High | Low | Medium | Vulnerable - easy to copy |
+| B | High | High | Low | Unsustainable - burns cash |
+| C | Low | High | High | No PMF - customers don't care |
+| **Ideal** | **High** | **High** | **High** | **Strong strategy** |
+
+**Step 2: Identify Gaps**
+Where is your strategy weakest? That's where you need to focus.
+
+**Step 3: Improve Your Strategy**
+For each low-scoring dimension:
+- **Low Delight?** Do we really understand the customer problem? Is our solution 10x better?
+- **Low Hard to Copy?** What moat can we build? What gets stronger over time?
+- **Low Margin-Enhancing?** How does this improve unit economics? What's the business model?
+
+**Step 4: Pressure-Test with Competitors**
+How would competitors score on DHM? Where are they weak? That's your opportunity.
+
+#### Common Mistakes
+
+❌ **Focusing Only on Delight** - Building features customers love but that don't improve business model or create defensibility
+❌ **Pursuing "Hard to Copy" Without Delight** - Building technical moats customers don't care about
+❌ **Margin-Enhancing at Expense of Delight** - Optimizing for revenue extraction at cost of customer experience
+❌ **Copying Competitors** - Just because competitor has a feature doesn't mean it scores well on DHM for YOUR business
+❌ **Overestimating Defensibility** - Thinking "we'll move fast" or "it's complex to build" makes something hard to copy
+
+#### DHM + Other Frameworks
+
+**DHM + Rumelt's Kernel:**
+- **Diagnosis** should reveal where you can win on DHM
+- **Guiding Policy** should state which dimension(s) you're optimizing for
+- **Coherent Actions** should strengthen multiple DHM dimensions
+
+**DHM + SWOT:**
+- **Strengths** = Existing advantages in H (Hard to Copy)
+- **Opportunities** = Where you can improve D, H, or M
+- **Weaknesses** = Low scores on DHM dimensions
+- **Threats** = Competitors with better DHM scores
+
+#### Quick DHM Checklist
+
+**DELIGHT**
+- [ ] Does this solve a real, painful problem?
+- [ ] Is our solution 10x better than alternatives?
+- [ ] Do we have evidence customers will love this?
+- [ ] Would customers be upset if we removed it?
+
+**HARD TO COPY**
+- [ ] What prevents competitors from copying this quickly?
+- [ ] Do we have a durable advantage (network effects, data, brand, etc.)?
+- [ ] What gets stronger over time?
+- [ ] Is our moat real or wishful thinking?
+
+**MARGIN-ENHANCING**
+- [ ] Does this increase revenue or reduce costs?
+- [ ] Will this improve retention/LTV?
+- [ ] What's the ROI on building this?
+- [ ] Does this improve our unit economics?
+
+**If you can't check most boxes, rethink your strategy.**
+
+**Remember:** A strong product strategy scores high on ALL THREE dimensions. Delight alone isn't enough - you need defensibility and sound economics.
+
+### SWOT Analysis
+
+**Framework:** Classic strategic planning tool
+
+SWOT stands for **Strengths**, **Weaknesses**, **Opportunities**, and **Threats**. It helps you understand your position and identify strategic options by analyzing internal and external factors.
+
+```
+INTERNAL (Things you control)
+┌─────────────────┬─────────────────┐
+│   STRENGTHS     │   WEAKNESSES    │
+│  (Helpful)      │   (Harmful)     │
+├─────────────────┼─────────────────┤
+│ OPPORTUNITIES   │    THREATS      │
+│  (Helpful)      │   (Harmful)     │
+└─────────────────┴─────────────────┘
+EXTERNAL (Things you don't control)
+```
+
+#### The Four Quadrants
+
+**STRENGTHS (Internal, Helpful)**
+- What advantages do we have?
+- What are we good at?
+
+**What to Look For:**
+- Unique capabilities or expertise
+- Strong brand or reputation
+- Proprietary technology or data
+- Existing customer relationships
+- Financial resources
+- Talented team
+- Network effects or installed base
+- Efficient operations
+
+**How to Use:** Strengths are the foundation of your strategy. Your guiding policy should leverage these advantages.
+
+**WEAKNESSES (Internal, Harmful)**
+- What limitations do we have?
+- Where are we vulnerable?
+
+**What to Look For:**
+- Limited resources (budget, team size)
+- Technical debt or infrastructure constraints
+- Gaps in expertise
+- Brand perception issues
+- Customer churn problems
+- Dependency on single platform/partner
+- Slow execution
+- Weak go-to-market capability
+
+**How to Use:** Weaknesses constrain your strategic options. Be honest about what you CAN'T do. Don't choose a strategy that requires strengths you don't have.
+
+**OPPORTUNITIES (External, Helpful)**
+- What trends or changes create opportunities for us?
+
+**What to Look For:**
+- Market trends favoring your approach
+- Technology shifts (e.g., AI, mobile, voice)
+- Customer behavior changes
+- Competitors' missteps
+- Regulatory changes
+- Underserved customer segments
+- Adjacent markets to expand into
+- Partnership opportunities
+
+**How to Use:** Opportunities are your "where to play" options. Pick opportunities that align with your strengths and can overcome weaknesses.
+
+**THREATS (External, Harmful)**
+- What external factors could hurt us?
+
+**What to Look For:**
+- New competitors entering the market
+- Existing competitors launching similar features
+- Technology shifts making your approach obsolete
+- Customer preference changes
+- Economic downturn affecting budget
+- Platform risk (dependency on Google, Apple, etc.)
+- Regulatory changes
+- Market saturation
+
+**How to Use:** Threats shape your strategic urgency and defensibility needs. Identify which threats are most critical and how to mitigate them.
+
+#### How to Conduct SWOT Analysis
+
+**Step 1: Gather Information**
+Collect before filling out SWOT:
+- Customer research (what they love/hate)
+- Competitive analysis (where you stand vs competitors)
+- Market trends (what's changing in your space)
+- Internal metrics (what your data shows)
+- Team input (what people on the ground see)
+
+**Step 2: Brainstorm Each Quadrant**
+Generate 5-10 items per quadrant. Be specific, not generic.
+
+❌ Generic: "Good team"
+✅ Specific: "3 engineers with deep expertise in real-time collaboration"
+
+❌ Generic: "Competition"
+✅ Specific: "Notion launching AI features Q2, with 10x our marketing budget"
+
+**Step 3: Prioritize**
+Mark 2-3 items per quadrant as **critical** (most strategic).
+
+**Step 4: Connect the Dots**
+Real insight comes from combining quadrants:
+
+- **Strength + Opportunity = Strategic Bet** ("We're great at X, and market is moving toward Y. Let's double down.")
+- **Weakness + Threat = Major Risk** ("We're weak at X, and competitors are attacking there. We need to defend or exit.")
+- **Strength + Threat = Defensive Play** ("We have advantage X, but threat Y could erode it. How do we protect?")
+- **Weakness + Opportunity = Build or Partner** ("There's big opportunity in X, but we lack capability Y. Do we build it or partner?")
+
+**Step 5: Develop Strategic Options**
+Based on SWOT, identify 2-4 strategic directions:
+
+**Example Strategies:**
+1. **Leverage Strength + Seize Opportunity** - "We're strong with SMBs (strength), AI is making tools more accessible (opportunity) → Build AI-first SMB product"
+2. **Shore Up Weakness + Defend Against Threat** - "We lack mobile (weakness), competitors are mobile-first (threat) → Ship mobile app to defend position"
+3. **Avoid Weakness + Ignore Opportunity** - "Enterprise opportunity exists but we're weak there → Stay focused on SMB instead"
+
+#### SWOT Best Practices
+
+**Do's ✅**
+- **Be Honest** - Don't sugarcoat weaknesses or overstate strengths
+- **Be Specific** - "Strong user retention (Week 1: 78%)" not "Good product"
+- **Use Data** - Support with metrics, research, evidence (not just gut feelings)
+- **Consider Relative Position** - Strengths/weaknesses are RELATIVE to competitors
+- **Update Regularly** - SWOT changes as market evolves; revisit quarterly
+
+**Don'ts ❌**
+- **Don't Create a Laundry List** - Prioritize the critical few
+- **Don't Confuse Internal with External** - Strengths/Weaknesses = YOU (internal); Opportunities/Threats = MARKET (external)
+- **Don't Stop at the SWOT** - SWOT is diagnostic, not strategy. Use it to inform strategic choices
+- **Don't Ignore Bad News** - Weaknesses and threats are the most valuable quadrants
+- **Don't Make It Static** - SWOT should lead to action: "So what? What does this mean for our strategy?"
+
+#### SWOT + Other Frameworks
+
+**SWOT + Rumelt's Kernel:**
+
+**SWOT informs your Diagnosis:**
+- Critical weaknesses and threats = challenges to overcome
+- Critical strengths and opportunities = advantages to leverage
+
+**Example:**
+- **Diagnosis:** "We're positioned to win with small teams (strength) in an AI-first world (opportunity), but vulnerable to better-funded competitors (threat) copying our approach unless we build defensibility"
+- **Guiding Policy:** "Become the AI-native productivity tool for founder-led companies, winning through superior product-market fit rather than marketing spend"
+- **Coherent Actions:** [Roadmap aligned with this]
+
+**SWOT + DHM:**
+Use DHM to evaluate strategic options generated by SWOT:
+
+| Option | Delight | Hard to Copy | Margin | Score |
+|--------|---------|--------------|--------|-------|
+| AI-First | High | Medium | High | ⭐⭐⭐ |
+| Product-Led | Medium | Low | Medium | ⭐⭐ |
+| Mobile-First | Medium | Low | Low | ⭐ |
+| Vertical | High | Medium | Medium | ⭐⭐⭐ |
+
+#### Quick SWOT Checklist
+
+**STRENGTHS** (Internal, Helpful)
+- [ ] What unique capabilities do we have?
+- [ ] What do customers love about us?
+- [ ] What advantages vs competitors?
+
+**WEAKNESSES** (Internal, Harmful)
+- [ ] What limits our options?
+- [ ] Where are we vulnerable?
+- [ ] What do we lack vs competitors?
+
+**OPPORTUNITIES** (External, Helpful)
+- [ ] What market trends favor us?
+- [ ] What customer needs are underserved?
+- [ ] Where are competitors weak?
+
+**THREATS** (External, Harmful)
+- [ ] What could disrupt our business?
+- [ ] What are competitors doing?
+- [ ] What external factors create risk?
+
+**Then ask:**
+- Which Strength + Opportunity combinations are most promising?
+- Which Weakness + Threat combinations are most dangerous?
+- What does this tell us about where to compete?
+
+**Remember:** SWOT is a diagnostic tool, not a strategy. Use it to understand your position honestly, identify strategic options, and prioritize where to focus. The best strategies leverage strengths, address weaknesses, seize opportunities, and mitigate threats - all at once.
 
 ---
 
